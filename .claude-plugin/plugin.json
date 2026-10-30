@@ -1,7 +1,7 @@
 {
   "name": "ecc",
-  "version": "2.2.3",
-  "description": "Harness-native ECC plugin for engineering teams - 68 agents, 293 skills, 94 legacy command shims, reusable hooks, rules, MCP conventions, and operator workflows for Claude Code plus adjacent agent harnesses",
+  "version": "2.2.3-ars.1",
+  "description": "ECC 2.2.3 trimmed for the Technology Ronin and ARS fleets: 4 commands (prp-plan, prp-implement, plan, prp-commit), 8 review agents, and the pre-bash dispatcher hook only. Upstream affaan-m/ECC at c05b2d66.",
   "author": {
     "name": "Affaan Mustafa",
     "url": "https://x.com/affaanmustafa"
@@ -37,9 +37,6 @@
     }
   },
   "mcpServers": {},
-  "skills": [
-    "./skills/"
-  ],
   "commands": [
     "./commands/"
   ]
