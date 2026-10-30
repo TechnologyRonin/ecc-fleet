@@ -12,8 +12,10 @@ every session start and only these pieces were ever invoked.
 - **Agents (8):** `code-reviewer`, `security-reviewer`, `php-reviewer`, `silent-failure-hunter`, `python-reviewer`,
   `typescript-reviewer`, `code-explorer`, `pr-test-analyzer`.
 - **Hook (1):** the `PreToolUse` `Bash` dispatcher (`pre:bash:dispatcher`): `block-no-verify` (the `--no-verify` and
-  `core.hooksPath` guard) plus `gateguard-fact-force` at the standard profile. `scripts/` holds only that hook's
-  require closure (22 files). The `hooks_enabled` and `hook_profile` user options still apply.
+  `core.hooksPath` guard). **This fork defaults the hook profile to `minimal`**, so only `block-no-verify` runs:
+  `gateguard-fact-force`, `auto-tmux-dev` and the post-bash notices stay off unless a seat opts in with
+  `ECC_HOOK_PROFILE=standard`. Edits from upstream: `scripts/lib/hook-flags.js` (default and fallback profile) and the
+  `hook_profile` default in `plugin.json`. `scripts/` holds only that hook's require closure (22 files, otherwise verbatim).
 
 ## What was dropped
 All 293 skills, the other 90 commands (including `orch-review` and its workflow), the other 60 agents (including the

@@ -81,8 +81,9 @@ function getHookProfile(env = process.env, managed = readManagedHookConfig(env))
         ? env.CLAUDE_PLUGIN_OPTION_HOOK_PROFILE
         : managed.profile
     );
-  const raw = String(selected ?? 'standard').trim().toLowerCase();
-  return VALID_PROFILES.has(raw) ? raw : 'standard';
+  // Technology Ronin fork: default and fallback profile is 'minimal' (block-no-verify only). Upstream defaults to 'standard'.
+  const raw = String(selected ?? 'minimal').trim().toLowerCase();
+  return VALID_PROFILES.has(raw) ? raw : 'minimal';
 }
 
 function getDisabledHookIds(env = process.env) {

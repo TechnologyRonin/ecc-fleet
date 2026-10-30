@@ -12,7 +12,7 @@
       "name": "ecc",
       "source": "./",
       "description": "ECC 2.2.3 trimmed to the fleet subset: 4 commands, 8 agents, one hook; see README.md",
-      "version": "2.2.3-ars.1",
+      "version": "2.2.3-tr.1",
       "author": {
         "name": "Affaan Mustafa",
         "email": "me@affaanmustafa.com"
